@@ -98,7 +98,9 @@
                             [input.id]: input.value,
                         };
                     });
-                    let feedback = localStorage.getItem('feedback') || [];
+                    let feedback = JSON.parse(
+                        localStorage.getItem('feedback') || "[]"
+                    )
                     console.log(feedback);
                     localStorage.setItem(
                         'feedback',
