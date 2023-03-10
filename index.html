@@ -100,10 +100,13 @@
                     let feedback = JSON.parse(
                         localStorage.getItem('feedback') || "[]"
                     )
-                    console.log(feedback);
+                    feedback = [
+                        ...feedback,
+                        userFeedback,
+                    ];
                     localStorage.setItem(
                         'feedback',
-                        JSON.stringify([userFeedback])
+                        JSON.stringify(feedback)
                     );
                     this.inputs.map( function(input){
                         return input.value = '';
