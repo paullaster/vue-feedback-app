@@ -36,16 +36,20 @@
                     <div>
                         <label for="feedback-type">Feedback Type</label>
                         <input 
-                        type="text" 
-                        id="feedback-type" 
-                        placeholder="question"
-                        :value="f_type"
-                        @input="$emit('input', $event.target.value)"
+                            type="text" 
+                            id="feedback-type" 
+                            placeholder="question"
+                            :value="f_type"
+                            @input="$emit('input', $event.target.value)"
                         />
                     </div>
                     <div>
                         <label for="feedback-msg">Feedback Message</label>
-                        <input type="text" id="feedback-msg" placeholder="Why ... ?"/>
+                        <input 
+                            type="text" 
+                            id="feedback-msg" 
+                            placeholder="Why ... ?
+                        "/>
                     </div>
                     <div>
                         <button type="submit">send to us</button>
@@ -61,7 +65,8 @@
             data: {
                 form_title: "Feedback Form",
                 feedback_title: "Feedback Feeds",
-                feedback_type: ''
+                feedback_type: '',
+                feedback_message: '',
             },
             methods: {
                 onSubmit(){
