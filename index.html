@@ -87,8 +87,9 @@
             },
             methods: {
                 onSubmit(){
-                    console.log(this.feedback_type);
-                    console.log(this.feedback_message);
+                    this.inputs.map( function(input){
+                        console.log(input.value);
+                    })
                 }
             }
         })
