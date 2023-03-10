@@ -72,6 +72,7 @@
             data: {
                 form_title: "Feedback Form",
                 feedback_title: "Feedback Feeds",
+                form_error: '',
                 inputs: [
                  {
                     id: 'feedback_type',
@@ -89,6 +90,9 @@
                 onSubmit(){
                     const userFeedback = 
                     this.inputs.map( function(input){
+                        if(input.value ===''){
+                            return this.form_error = "Can not be empty";
+                        }
                         return {
                             [input.id]: input.value,
                         };
