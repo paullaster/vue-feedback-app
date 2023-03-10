@@ -138,11 +138,13 @@
                         console.log("Your feedback is empty");
                         return;
                     } 
-                    this.feedbacks = [...feedbackStore];
+                    this.feedbacks = feedbackStore;
                 }
                 
             }
+            
         })
+        Vue.getFeedback()
         
     </script>
 </body>
