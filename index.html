@@ -29,10 +29,10 @@
                 >
                     send us your feedback
                 </custome-button>
-                <p>
-                    {{form_error}}
-                </p>
             </div>
+            <p>
+                {{form_error}}
+            </p>
         </form>
         <p :title="feedback_title">
             {{feedback_title}}
@@ -91,13 +91,14 @@
             },
             methods: {
                 onSubmit(){
+                    this.inputs.map(function(){
+                        if(input.value ===''){
+                        return this.form_error = `
+                            ${input.id} Can not be empty!
+                        `;
+                        }})
                     const userFeedback = 
                     this.inputs.map( function(input){
-                        if(input.value ===''){
-                            return this.form_error = `
-                                ${input.id} Can not be empty!
-                            `;
-                        }
                         return {
                             [input.id]: input.value,
                         };
