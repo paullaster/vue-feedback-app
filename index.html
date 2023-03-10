@@ -13,7 +13,9 @@
         <p :title="form_title">
             {{form_title}}
         </p>
-        <custom-feedback>
+        <custom-feedback
+        v-model="feedback_type"
+        >
         </custom-feedback>
         <p :title="feedback_title">
             {{feedback_title}}
@@ -49,7 +51,8 @@
             el:'#app',
             data: {
                 form_title: "Feedback Form",
-                feedback_title: "Feedback Feeds"
+                feedback_title: "Feedback Feeds",
+                feedback_type: ''
             }
         })
     </script>
