@@ -13,14 +13,21 @@
         <p :title="form_title">
             {{form_title}}
         </p>
-        <custom-feedback
-        v-model="feedback_type"
-        v-model="feedback_message"
-        :f_type="feedback_type"
-        :submit="onSubmit"
-        :f_msg="feedback_message"
-        >
-        </custom-feedback>
+        <form @submit.prevent="onSubmit">
+            <custom-feedback
+                v-model="feedback_type"
+                :f_type="feedback_type"
+                :submit="onSubmit"
+                :f_msg="feedback_message"
+            >
+            </custom-feedback>
+            <custom-feedback
+                v-model="feedback_message"
+                :f_type="feedback_type"
+                :f_msg="feedback_message"
+            >
+            </custom-feedback>
+        </form>
         <p :title="feedback_title">
             {{feedback_title}}
         </p>
