@@ -38,7 +38,11 @@
             {{feedback_title}}
         </p>
         <ul>
-            <feedback-feed>
+            <feedback-feed
+                v-for="(fb, index) in feedback"
+                :feedback="fb"
+                :key="index"
+            >
             </feedback-feed>
         </ul>
     </div>
