@@ -135,7 +135,8 @@
                     localStorage.getItem('feedback') || "[]"
                     );
                     if(feedbacks.length < 1){
-                        console.log("Your feedback is empty")
+                        console.log("Your feedback is empty");
+                        return;
                     } 
                 }
             }
