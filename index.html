@@ -13,6 +13,8 @@
         <p>
             {{title}}
         </p>
+        <custom-form>
+        </custom-form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script>
@@ -24,9 +26,10 @@
         });
         
         Vue.component('custom-form', {
+            template: '<p>{{msq}}</p>',
             data(){
                 return{
-                    msg: "I ama a custome form"
+                    msg: "I am a custom form"
                 }
             }
         })
