@@ -76,8 +76,12 @@
             props: ['feedback'],
             template: `
             <li>
-                <span style={display:block}>{{feedback.feedback_type}}</span>
-                <span style={display:block}>{{feedback.feedback_message}}</span>
+                <span 
+                    style='display:block; font-weight:bold;'
+                >
+                    {{feedback.feedback_type}}
+                </span>
+                <span style='display:block'>{{feedback.feedback_message}}</span>
             </li>
             `
         });
