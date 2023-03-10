@@ -92,20 +92,20 @@
             },
             methods: {
                 onSubmit(){
-                    const userFeedback = 
                     this.inputs.map( function(input){
-                        return {
+                        const userFeedback =  {
                             [input.id]: input.value,
                         };
+                        console.log(userFeedback);
                     });
-                    let feedback = JSON.parse(
-                        localStorage.getItem('feedback') || "[]"
-                    )
-                    console.log(feedback);
-                    localStorage.setItem(
-                        'feedback',
-                        JSON.stringify(userFeedback)
-                    );
+                    //let feedback = JSON.parse(
+                    //    localStorage.getItem('feedback') || "[]"
+                    //)
+                    //console.log(feedback);
+                    //localStorage.setItem(
+                    //    'feedback',
+                    //    JSON.stringify(userFeedback)
+                    //);
                     this.inputs.map( function(input){
                         return input.value = '';
                     })
