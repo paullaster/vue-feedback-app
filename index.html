@@ -22,8 +22,13 @@
                 title: 'Feedback from'
             },
         });
-        Vue.component('feedback-form', {
-            template: `<p>Feedback form</p>`,
+        
+        Vue.component('custom-form', {
+            data(){
+                return{
+                    msg: "I ama a custome form"
+                }
+            }
         })
     </script>
 </body>
