@@ -32,33 +32,14 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script>
         Vue.component('custom-feedback', {
-            props: ['f_type', 'f_msg', 'submit'],
+            props: ['f_type', 'f_msg', "id", "label"],
             template: `
-                <form @submit.prevent="submit">
-                    <div>
-                        <label for="feedback-type">Feedback Type</label>
-                        <input 
-                            type="text" 
-                            id="feedback-type" 
-                            placeholder="question"
-                            :value="f_type"
-                            @input="$emit('input', $event.target.value)"
-                        />
-                    </div>
-                    <div>
-                        <label for="feedback-msg">Feedback Message</label>
-                        <input 
-                            type="text" 
-                            id="feedback-msg" 
-                            placeholder="Why ... ?"
-                            :value="f_msg"
-                            @input="$emit('input', $event.target.value)"
-                        />
-                    </div>
-                    <div>
-                        <button type="submit">send to us</button>
-                    </div>
-                </form>
+                        <div>
+                            <label for="">
+                            </label>
+                            <input type="text" id=""/>
+                        </div>
+                        
             `,
         });
         Vue.component('feedback-feed',{
