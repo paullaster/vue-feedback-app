@@ -15,6 +15,7 @@
         </p>
         <custom-feedback
         v-model="feedback_type"
+        :feedback_type="feedback_type"
         >
         </custom-feedback>
         <p :title="feedback_title">
@@ -28,11 +29,17 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script>
         Vue.component('custom-feedback', {
+            props: ['feedback_type'],
             template: `
                 <form>
                     <div>
                         <label for="feedback-type">Feedback Type</label>
-                        <input type="text" id="feedback-type" placeholder="question"/>
+                        <input 
+                        type="text" 
+                        id="feedback-type" 
+                        placeholder="question"
+                        :value="feedback_type"
+                        />
                     </div>
                     <div>
                         <label for="feedback-msg">Feedback Message</label>
