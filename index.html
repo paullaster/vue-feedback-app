@@ -39,7 +39,7 @@
         </p>
         <ul>
             <feedback-feed
-                v-for="(feedback, index) in feedbacks"
+                v-for="(feedback, index) in getFeedback"
                 :feedback="feedback"
                 :key="index"
             >
@@ -87,7 +87,6 @@
                 form_title: "Feedback Form",
                 feedback_title: "Feedback Feeds",
                 form_error: '',
-                feedbacks: [],
                 inputs: [
                  {
                     id: 'feedback_type',
