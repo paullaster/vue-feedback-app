@@ -92,6 +92,7 @@
             },
             methods: {
                 onSubmit(){
+                    let userFeedbackArray = [];
                     this.inputs.map( function(input){
                         const userFeedback =  {
                             [input.id]: input.value,
