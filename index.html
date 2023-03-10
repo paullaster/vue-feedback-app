@@ -97,7 +97,8 @@
                         const userFeedback =  {
                             [input.id]: input.value,
                         };
-                        console.log(userFeedback);
+                        userFeedbackArray=
+                        [userFeedbackArray, ...userFeedback];
                     });
                     //let feedback = JSON.parse(
                     //    localStorage.getItem('feedback') || "[]"
