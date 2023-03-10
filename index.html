@@ -69,7 +69,13 @@
             </button>`,
         })
         Vue.component('feedback-feed',{
-            template: `<li>Feeds from feedback</li>`
+            props: ['feedback'],
+            template: `
+            <li>
+                <span>{{feedback.feedback_type}}</span>
+                <span>feedback.feedback_message</span>
+            </li>
+            `
         });
         new Vue({
             el:'#app',
