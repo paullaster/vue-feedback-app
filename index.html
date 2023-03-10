@@ -130,10 +130,11 @@
                     })
                 },
                 getFeedback(){
-                    const feedbackStore = 
+                    const feedbacks = 
                     JSON.parse(
                     localStorage.getItem('feedback') || "[]"
-                    )
+                    );
+                    
                 }
             }
         })
