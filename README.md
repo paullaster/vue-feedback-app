@@ -1,2 +1,3 @@
 # FEEDBACK VUE APP
-This simple vue app, implement UI components to enable uer to leave feedback
+This simple vue app, implement UI components to enable user to leave feedback:
+this app allow users to post their feedback and and the feedback list is displayed at the bottom and further improvements include, realtime update immediately a feedback is posted and stored in the localstorage, filtering thevfeedbacks base on the feedback type, editing feedbacks, feedback status; whether the company has reacted to the feedback or not
