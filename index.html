@@ -151,7 +151,7 @@
             watch: {
                     // Watch for changes to feedbackList in localStorage
 
-                '$data.feedback': {
+                '$data.feedbacks': {
                     handler: function(newFeedbackList){
                         // Update feedback list in localStorage
                         localStorage.setItem('feedback', JSON.stringify(newFeedbackList));
