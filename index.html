@@ -37,6 +37,22 @@
         <p :title="feedback_title">
             {{feedback_title}}
         </p>
+        <form @submit.prevent="onSubmit">
+            <custom-feedback
+                
+            >
+            Filter specific feedback here:
+            </custom-feedback>
+            <div>
+                <custome-button
+                 type="button"
+                 @click="filterFeedbackList('Recommendation')"
+                >
+                    filter feedbacks
+                </custome-button>
+            </div>
+            
+        </form>
         <ol>
             <feedback-feed
                 v-for="(feedback, index) in feedbacks"
