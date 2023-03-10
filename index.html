@@ -100,10 +100,15 @@
                     let feedback = JSON.parse(
                         localStorage.getItem('feedback') || "[]"
                     )
+                    const messageExist =
+                    feedback.find(function(fb){
+                        return fb.feedback_message === userFeedback.feedback_message
+                    })
                     feedback = [
                         ...feedback,
                         userFeedback,
                     ];
+                    //console.log(messageExist,);
                     localStorage.setItem(
                         'feedback',
                         JSON.stringify(feedback)
