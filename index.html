@@ -95,9 +95,8 @@
                     const userFeedback =
                     this.inputs.reduce( function(result, input){
                          result[input.id] = input.value;
-                        return result;
-                        
-                    });
+                        return result;  
+                    }, {});
                     console.log(this.inputs);
                     //let feedback = JSON.parse(
                     //    localStorage.getItem('feedback') || "[]"
