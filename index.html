@@ -83,8 +83,10 @@
             `,
         });
         Vue.component('custome-button', {
-            props: [],
-            template: `<button>
+            props: ['filter'],
+            template: `<button
+            v-on="filter"
+            >
                 <slot></slot>
             </button>`,
         })
