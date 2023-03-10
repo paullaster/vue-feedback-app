@@ -23,7 +23,14 @@
         Vue.component('feedback-form', {
             template: `
                 <form>
-                    
+                    <div>
+                        <label for="fname">Feedback Name</label>
+                        <input type="text" id="fname">
+                    </div>
+                    <div>
+                        <label for="msg">Message Name</label>
+                        <textarea col="5" row="5" id="msg">
+                    </div>
                 </form>
             `,
             data: function(){
