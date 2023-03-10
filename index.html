@@ -88,7 +88,9 @@
             methods: {
                 onSubmit(){
                     this.inputs.map( function(input){
-                        console.log(input.value);
+                        return {
+                            [input.id]: input.value,
+                        };
                     })
                 }
             }
