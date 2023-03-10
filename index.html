@@ -130,7 +130,10 @@
                     })
                 },
                 getFeedback(){
-
+                    const feedbackStore = 
+                    JSON.parse(
+                    localStorage.getItem('feedback') || "[]"
+                    )
                 }
             }
         })
