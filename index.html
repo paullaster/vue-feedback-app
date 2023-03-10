@@ -154,6 +154,7 @@
                 '$data.feedback': {
                     handler: function(newFeedbackList){
                         // Update feedback list in localStorage
+                        localStorage.setItem('feedback', JSON.stringify(newFeedbackList));
                     }
                 }
             }
