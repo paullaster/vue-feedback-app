@@ -147,6 +147,15 @@
             },
             mounted(){
                 this.getFeedbackList()
+            },
+            watch: {
+                    // Watch for changes to feedbackList in localStorage
+
+                '$data.feedback': {
+                    handler: function(newFeedbackList){
+                        // Update feedback list in localStorage
+                    }
+                }
             }
             
         })
