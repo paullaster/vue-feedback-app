@@ -17,7 +17,6 @@
             <custom-feedback
                 v-model="feedback_type"
                 :f_type="feedback_type"
-                :submit="onSubmit"
                 :f_msg="feedback_message"
             >
             Feedback type
@@ -78,9 +77,11 @@
                 inputs: [
                  {
                     id: 'feedback_type',
+                    value:''
                  },
                  {
                     id: 'feedback_message',
+                    value:''
                  }
                 ]
             },
