@@ -93,6 +93,8 @@
                             [input.id]: input.value,
                         };
                     });
+                    let feedback = localStorage.getItem('feedback') || [];
+
                     localStorage.setItem(
                         'feedback',
                         JSON.stringify(userFeedback)
