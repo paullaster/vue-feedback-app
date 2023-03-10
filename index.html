@@ -104,12 +104,12 @@
                     feedback.find(function(fb){
                         return fb.feedback_message === userFeedback.feedback_message
                     })
-                    console.log(messageExist)
-                    feedback = [
+                    if(!messageExist){
+                        feedback = [
                         ...feedback,
                         userFeedback,
                     ];
-                    //console.log(messageExist,);
+                    }
                     localStorage.setItem(
                         'feedback',
                         JSON.stringify(feedback)
