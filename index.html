@@ -56,6 +56,7 @@
                                 :id="f_id"
                                 :value="f_value"
                                 @input="$emit('input', $event.target.value)"
+                                required
                             />
                         </div>
                         
@@ -91,12 +92,6 @@
             },
             methods: {
                 onSubmit(){
-                    this.inputs.map(function(){
-                        if(input.value ===''){
-                        return this.form_error = `
-                            ${input.id} Can not be empty!
-                        `;
-                        }})
                     const userFeedback = 
                     this.inputs.map( function(input){
                         return {
