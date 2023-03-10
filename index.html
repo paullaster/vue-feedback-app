@@ -87,6 +87,7 @@
                 form_title: "Feedback Form",
                 feedback_title: "Feedback Feeds",
                 form_error: '',
+                feedbacks: [],
                 inputs: [
                  {
                     id: 'feedback_type',
@@ -129,18 +130,20 @@
                     })
                 },
                 getFeedback(){
-                    const feedbacks = 
+                    const feedbackStore = 
                     JSON.parse(
                     localStorage.getItem('feedback') || "[]"
                     );
-                    if(feedbacks.length < 1){
+                    if(feedbackStore.length < 1){
                         console.log("Your feedback is empty");
                         return;
                     } 
-                    return feedbacks;
+                    this.feedbacks = [...feedbackStore];
                 }
+                
             }
         })
+        
     </script>
 </body>
 </html>
