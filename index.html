@@ -134,7 +134,9 @@
                     JSON.parse(
                     localStorage.getItem('feedback') || "[]"
                     );
-                    
+                    if(feedbacks.length < 1){
+                        
+                    } 
                 }
             }
         })
