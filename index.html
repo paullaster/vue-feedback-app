@@ -27,6 +27,11 @@
                 :f_msg="feedback_message"
             >
             </custom-feedback>
+            <div>
+                <custome-button>
+                    send us your feedback
+                </custome-button>
+            </div>
         </form>
         <p :title="feedback_title">
             {{feedback_title}}
@@ -52,7 +57,7 @@
         Vue.component('custome-button', {
             props: [],
             template: `<button type="">
-                <Slot></Slot>
+                <slot></slot>
             </button>`,
         })
         Vue.component('feedback-feed',{
