@@ -93,7 +93,10 @@
                             [input.id]: input.value,
                         };
                     });
-                    console.log(userFeedback);
+                    localStorage.setItem(
+                        'feedback',
+                        JSON.stringify(userFeedback)
+                    );
                 }
             }
         })
