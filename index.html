@@ -13,18 +13,28 @@
         <p :title="title">
             {{title}}
         </p>
+        <custom-feedback>
+
+        </custom-feedback>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script>
+        Vue.component('custom-feedback', {
+            template: `
+                <form>
+                    <div>
+                        <label>Feedback Type</label>
+                        <input type="text" id="feedback-type" placeholder="question"/>
+                    </div>
+                </form>
+            `,
+        });
         new Vue({
             el:'#app',
             data: {
                 title: "Feedback Form"
             }
         })
-        Vue.component('feedback-form', {
-            template: '<p>I am Feedback Form</p>'
-        });
     </script>
 </body>
 </html>
