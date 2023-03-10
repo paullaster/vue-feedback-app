@@ -133,17 +133,20 @@
                         return input.value = '';
                     })
                 }, 
+                getFeedbackList(){
+                    const feedbackStore = 
+                    JSON.parse(
+                    localStorage.getItem('feedback') || "[]"
+                    );
+                    if(feedbackStore.length < 1){
+                        console.log("Your feedback is empty");
+                        return;
+                    } 
+                    this.feedbacks = feedbackStore;
+                }
             },
             mounted(){
-                const feedbackStore = 
-                JSON.parse(
-                localStorage.getItem('feedback') || "[]"
-                );
-                if(feedbackStore.length < 1){
-                    console.log("Your feedback is empty");
-                    return;
-                } 
-                this.feedbacks = feedbackStore;
+                
             }
             
         })
