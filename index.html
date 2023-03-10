@@ -36,7 +36,9 @@
                 </form>
             `,
         });
-        Vue.component('feedback',{});
+        Vue.component('feedback',{
+            template: `<li>Feeds from feedback</li>`
+        });
         new Vue({
             el:'#app',
             data: {
