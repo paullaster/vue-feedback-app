@@ -51,7 +51,7 @@
             props: ['f_type', 'f_msg', "id"],
             template: `
                         <div>
-                            <label for="">
+                            <label>
                                 <slot></slot>
                             </label>
                             <input type="text" id=""/>
@@ -75,6 +75,14 @@
                 feedback_title: "Feedback Feeds",
                 feedback_type: '',
                 feedback_message: '',
+                inputs: [
+                 {
+                    id: 'feedback_type',
+                 },
+                 {
+                    id: 'feedback_message',
+                 }
+                ]
             },
             methods: {
                 onSubmit(){
