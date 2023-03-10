@@ -15,16 +15,14 @@
         </p>
         <form @submit.prevent="onSubmit">
             <custom-feedback
-                v-model="feedback_type"
-                :f_type="feedback_type"
-                :f_msg="feedback_message"
+                v-for="input in inputs"
+                
             >
             Feedback type
             </custom-feedback>
             <custom-feedback
                 v-model="feedback_message"
                 :f_type="feedback_type"
-                :f_msg="feedback_message"
             >
             Feedback message
             </custom-feedback>
