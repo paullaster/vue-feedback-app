@@ -16,16 +16,13 @@
         <form @submit.prevent="onSubmit">
             <custom-feedback
                 v-for="input in inputs"
-                
+                v-model="input.value"
+                :f_value="input.value"
+                :id="input.id"
             >
             Feedback type
             </custom-feedback>
-            <custom-feedback
-                v-model="feedback_message"
-                :f_type="feedback_type"
-            >
-            Feedback message
-            </custom-feedback>
+           
             <div>
                 <custome-button
                  type="submit"
@@ -70,16 +67,16 @@
             data: {
                 form_title: "Feedback Form",
                 feedback_title: "Feedback Feeds",
-                feedback_type: '',
-                feedback_message: '',
                 inputs: [
                  {
                     id: 'feedback_type',
-                    value:''
+                    value:'',
+                    label: 'Feedback Type',
                  },
                  {
                     id: 'feedback_message',
-                    value:''
+                    value:'',
+                    label: 'Feedback Message',
                  }
                 ]
             },
