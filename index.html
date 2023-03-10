@@ -102,10 +102,10 @@
                     //    localStorage.getItem('feedback') || "[]"
                     //)
                     //console.log(feedback);
-                    //localStorage.setItem(
-                    //    'feedback',
-                    //    JSON.stringify(userFeedback)
-                    //);
+                    localStorage.setItem(
+                        'feedback',
+                        JSON.stringify([userFeedback])
+                    );
                     this.inputs.map( function(input){
                         return input.value = '';
                     })
