@@ -45,12 +45,12 @@
             props: ['f_value', "id"],
             template: `
                         <div>
-                            <label>
+                            <label for="id">
                                 <slot></slot>
                             </label>
                             <input 
                                 type="text" 
-                                id=""
+                                id="id"
                                 :value="f_value"
                                 @input="$emit('input', $event.target.value)"
                             />
