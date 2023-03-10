@@ -144,9 +144,11 @@
                     } 
                     this.feedbacks = feedbackStore;
                 },
-                filterFeedbackList(){
+                filterFeedbackList(type){
                     const feedbackStore = this.getFeedbackList();
-                    const filterFeedbackList = 
+                    const filterFeedbackList = feedbackStore.filter( function(feedback){
+                        
+                    })
                 }
             },
             mounted(){
