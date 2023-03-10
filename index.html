@@ -147,7 +147,7 @@
                 filterFeedbackList(type){
                     const feedbackStore = this.getFeedbackList();
                     const filterFeedbackList = feedbackStore.filter( function(feedback){
-                        return feedback.feedback.type === type
+                        return feedback.feedback_type.charAt(0).toUpperCase() === type.charAt(0).toUpperCase()
                     })
                 }
             },
