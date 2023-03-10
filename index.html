@@ -147,7 +147,7 @@
                 filterFeedbackList(type){
                     const feedbackStore = this.getFeedbackList();
                     const filterFeedbackList = feedbackStore.filter( function(feedback){
-                        
+                        return feedback.feedback.type === type
                     })
                 }
             },
