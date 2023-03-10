@@ -31,7 +31,7 @@
         Vue.component('custom-feedback', {
             props: ['feedback_type'],
             template: `
-                <form>
+                <form @submit="onSubmit">
                     <div>
                         <label for="feedback-type">Feedback Type</label>
                         <input 
@@ -39,6 +39,7 @@
                         id="feedback-type" 
                         placeholder="question"
                         :value="feedback_type"
+                        @input=$emit('input', $event.target.value)
                         />
                     </div>
                     <div>
