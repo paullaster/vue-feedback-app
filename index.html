@@ -16,6 +16,7 @@
         <custom-feedback
         v-model="feedback_type"
         :feedback_type="feedback_type"
+        :submit="onSubmit"
         >
         </custom-feedback>
         <p :title="feedback_title">
@@ -31,7 +32,7 @@
         Vue.component('custom-feedback', {
             props: ['feedback_type', 'submit'],
             template: `
-                <form @submit="submit">
+                <form @submit.prevent="submit">
                     <div>
                         <label for="feedback-type">Feedback Type</label>
                         <input 
