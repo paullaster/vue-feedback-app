@@ -30,7 +30,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script>
         Vue.component('custom-feedback', {
-            props: ['f_type', 'submit'],
+            props: ['f_type', 'f-msg', 'submit'],
             template: `
                 <form @submit.prevent="submit">
                     <div>
@@ -49,6 +49,7 @@
                             type="text" 
                             id="feedback-msg" 
                             placeholder="Why ... ?"
+                            :value="f_msg"
                         />
                     </div>
                     <div>
