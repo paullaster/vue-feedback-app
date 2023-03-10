@@ -92,13 +92,12 @@
             },
             methods: {
                 onSubmit(){
-                    let userFeedbackArray = [];
+                    const userFeedback =
                     this.inputs.map( function(input){
-                        const userFeedback =  {
+                         return  {
                             [input.id]: input.value,
                         };
-                        userFeedbackArray=
-                        [...userFeedbackArray, userFeedback];
+                        
                     });
                     console.log(userFeedbackArray);
                     //let feedback = JSON.parse(
