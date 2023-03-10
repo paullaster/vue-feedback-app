@@ -10,34 +10,20 @@
     <h1>The Vue Feedback App</h1>
     <p>Welcom, and please tell us about us</p>
     <div id="app">
-
+        <p>
+            {{title}}
+        </p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script>
         new Vue({
             el: '#app',
             data: {
-
-            }
-        })
+                title: 'Feedback from'
+            },
+        });
         Vue.component('feedback-form', {
-            template: `
-                <form>
-                    <div>
-                        <label for="fname">Feedback Name</label>
-                        <input type="text" id="fname">
-                    </div>
-                    <div>
-                        <label for="msg">Message Name</label>
-                        <textarea col="5" row="5" id="msg">
-                    </div>
-                </form>
-            `,
-            data: function(){
-                return {
-
-                }
-            }
+            template: `<p>Feedback form</p>`,
         })
     </script>
 </body>
