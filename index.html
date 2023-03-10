@@ -39,8 +39,8 @@
                         type="text" 
                         id="feedback-type" 
                         placeholder="question"
-                        :value="feedback_type"
-                        @input=$emit('input', $event.target.value)
+                        :value="f_type"
+                        @input="$emit('input', $event.target.value)"
                         />
                     </div>
                     <div>
@@ -65,7 +65,7 @@
             },
             methods: {
                 onSubmit(){
-                    console.log(feedback_type);
+                    console.log(this.feedback_type);
                 }
             }
         })
