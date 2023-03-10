@@ -30,7 +30,9 @@
             Feedback message
             </custom-feedback>
             <div>
-                <custome-button>
+                <custome-button
+                 type="submit"
+                >
                     send us your feedback
                 </custome-button>
             </div>
@@ -59,7 +61,7 @@
         });
         Vue.component('custome-button', {
             props: [],
-            template: `<button type="">
+            template: `<button>
                 <slot></slot>
             </button>`,
         })
