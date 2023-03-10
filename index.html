@@ -10,12 +10,18 @@
     <h1>The Vue Feedback App</h1>
     <p>Welcom, and please tell us about us</p>
     <div id="app">
-        <p :title="title">
-            {{title}}
+        <p :title="form_title">
+            {{form_title}}
         </p>
         <custom-feedback>
-
         </custom-feedback>
+        <p :title="feedback_title">
+            {{feedback_title}}
+        </p>
+        <ul>
+            <feedback-feed>
+            </feedback-feed>
+        </ul>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script>
@@ -36,13 +42,14 @@
                 </form>
             `,
         });
-        Vue.component('feedback',{
+        Vue.component('feedback-feed',{
             template: `<li>Feeds from feedback</li>`
         });
         new Vue({
             el:'#app',
             data: {
-                title: "Feedback Form"
+                form_title: "Feedback Form",
+                feedback_title: "Feedback Form"
             }
         })
     </script>
